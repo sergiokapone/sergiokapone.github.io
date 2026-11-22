@@ -200,3 +200,17 @@ h1{font-size:clamp(46px,8vw,92px);line-height:1;font-weight:800;letter-spacing:-
 .lb button:hover{background:var(--a);color:#06121c}
 .lb-x{position:absolute;top:18px;right:18px}
 @media(max-width:960px){.lb button.lb-p,.lb button.lb-n{position:absolute;bottom:18px}.lb-p{left:18px}.lb-n{right:18px}.ph span{opacity:1;transform:none}}
+
+/* BURGER */
+.burger{display:none;background:var(--card);border:1px solid var(--line);width:36px;height:36px;border-radius:10px;cursor:pointer;padding:0;flex-direction:column;justify-content:center;align-items:center;gap:4px}
+.burger span{display:block;width:16px;height:2px;background:var(--tx);border-radius:2px;transition:.25s}
+.burger[aria-expanded=true] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded=true] span:nth-child(2){opacity:0}
+.burger[aria-expanded=true] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+@media(max-width:960px){
+  .burger{display:flex;margin-left:auto}
+  .theme{margin-left:0}
+  .nav nav{position:absolute;top:100%;left:0;right:0;display:none;flex-direction:column;gap:2px;padding:10px 16px 16px;background:var(--bg);border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+  .nav.open nav{display:flex}
+  .nav nav a{padding:12px 14px;font-size:16px}
+}

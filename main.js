@@ -11,6 +11,13 @@
   };
   $('#yr').textContent = new Date().getFullYear();
 
+  /* burger */
+  const burger = $('#burger');
+  const setMenu = o => { $('#nav').classList.toggle('open', o); burger.setAttribute('aria-expanded', o); };
+  burger.onclick = () => setMenu(!$('#nav').classList.contains('open'));
+  document.querySelectorAll('.nav nav a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  addEventListener('keydown', e => e.key === 'Escape' && setMenu(false));
+
   /* nav shadow + active link */
   const nav = $('#nav');
   addEventListener('scroll', () => nav.classList.toggle('stuck', scrollY > 20), { passive: true });
