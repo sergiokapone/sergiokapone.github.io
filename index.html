@@ -1,1 +1,262 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/logo.jpg"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Ponomarenko Portfolio Website"><meta name="keywords" content="HTML, CSS, JavaScript, react, vcard, resposnive, resume, personal, card, cv, cards, portfolio"><meta name="author" content="Sergiy Ponomarenko"><link rel="apple-touch-icon" href="/logo.jpg"/><link rel="manifest" href="/manifest.json"/><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><title>Portfolio | Sergiy Ponomarenko</title><script defer="defer" src="/static/js/main.24435f0c.js"></script><link href="/static/css/main.64a78755.css" rel="stylesheet"></head><body class="light-theme"><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script><script src="https://unpkg.com/aos@next/dist/aos.js"></script></body></html>
+<!doctype html>
+<html lang="uk" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="kCB1GxYUQYdvwHHehggMfevRkWNx0rU-JnknHyqfPOc" />
+<title>Сергій Пономаренко — фізик, викладач, Python-розробник</title>
+<meta name="description" content="Сергій Пономаренко — кандидат фіз.-мат. наук, доцент кафедри прикладної фізики КПІ ім. Ігоря Сікорського. Обчислювальна фізика, квантова хімія, LaTeX, Python, відкриті підручники.">
+<meta property="og:title" content="Сергій Пономаренко — фізик, викладач, Python-розробник">
+<meta property="og:description" content="Обчислювальна фізика, квантова хімія, відкриті підручники та інструменти для науки.">
+<meta property="og:image" content="https://sergiokapone.github.io/photo.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230b0f17'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='%2338bdf8' font-family='monospace' font-weight='700'>Ψ</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top"><span class="psi">Ψ</span> sergiokapone</a>
+  <nav>
+    <a href="#about">Про мене</a>
+    <a href="#teaching">Викладання</a>
+    <a href="#books">Підручники</a>
+    <a href="#projects">Проєкти</a>
+    <a href="#repos">GitHub</a>
+    <a href="#path">Шлях</a>
+    <a href="#contact">Контакти</a>
+  </nav>
+  <button class="theme" id="theme" aria-label="Змінити тему" title="Світла / темна тема">◐</button>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <canvas id="field" aria-hidden="true"></canvas>
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow mono">// привіт, я</p>
+      <h1>Сергій<br><span class="grad">Пономаренко</span></h1>
+      <p class="roles mono"><span id="typed"></span><span class="caret">▍</span></p>
+      <p class="lead">Кандидат фізико-математичних наук, доцент кафедри прикладної фізики КПІ&nbsp;ім.&nbsp;Ігоря&nbsp;Сікорського. Моделюю фізичні системи, рахую молекули, пишу відкриті підручники та інструменти для науки.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">Дивитись проєкти</a>
+        <a class="btn" href="https://github.com/sergiokapone" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn" href="#contact">Зв’язатись</a>
+      </div>
+      <p class="hint mono">↳ рухай курсор: лінії поля заряду «+» тягнуться до курсора «−»</p>
+    </div>
+    <div class="hero-photo">
+      <div class="ring"></div>
+      <img src="photo.jpg" alt="Сергій Пономаренко" width="360" height="360">
+      <span class="chip c1 mono">Python</span>
+      <span class="chip c2 mono">LaTeX</span>
+      <span class="chip c3 mono">DFT / ORCA</span>
+    </div>
+  </div>
+  <a class="scroll mono" href="#about" aria-label="Нижче">scroll ↓</a>
+</section>
+
+<!-- STATS -->
+<section class="wrap stats reveal" aria-label="Цифри">
+  <div class="stat"><b data-count="77">0</b><span>публічних репозиторіїв</span></div>
+  <div class="stat"><b data-count="20" data-suffix="+">0</b><span>років викладання</span></div>
+  <div class="stat"><b data-count="6">0</b><span>авторських курсів</span></div>
+  <div class="stat"><b data-count="10" data-suffix="+">0</b><span>відкритих підручників</span></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="wrap sec reveal">
+  <h2><span class="mono num">01</span> Про мене</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>Я фізик за освітою й програміст за звичкою. Закінчив Миколаївський національний педагогічний університет за спеціальністю «Фізика» (2001), захистив кандидатську з фізики полімерів в Інституті хімії високомолекулярних сполук НАН України (2005). Від 2014 року працюю доцентом кафедри прикладної фізики НН ФТІ&nbsp;КПІ.</p>
+      <p>Використовую Python для наукових обчислень, аналізу даних, автоматизації та моделювання. Те, що колись було скриптом «для себе», зазвичай виростає в бібліотеку, плагін або повноцінний підручник — і лягає у відкритий репозиторій.</p>
+      <p>Окрім науки й викладання — адмініструю сайти та Google Workspace факультету, веду протоколи кафедри, відповідаю за міжнародні питання НН ФТІ.</p>
+    </div>
+    <div class="card interests">
+      <h3>Наукові інтереси</h3>
+      <ul>
+        <li><span class="dot a"></span>Квантово-хімічні розрахунки молекул функціональних матеріалів</li>
+        <li><span class="dot b"></span>Комп’ютерне моделювання процесів горіння твердих і газоподібних палив</li>
+        <li><span class="dot c"></span>Фізика плазми та класична електродинаміка</li>
+        <li><span class="dot d"></span>Наукове програмне забезпечення та відкрита освіта</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sub">Стек</h3>
+  <div class="stack">
+    <div class="card"><h4 class="mono">наука й дані</h4><p>
+      <i><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">Python</i><i><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="">NumPy</i><i><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scipy/scipy-original.svg" alt="">SciPy</i><i><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" alt="">Matplotlib</i><i><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="">Jupyter</i><i><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg" alt="" class="inv">LaTeX</i><i><span class="gl">◇</span>TikZ</i><i><span class="gl">⚛</span>ORCA</i></p></div>
+    <div class="card"><h4 class="mono">бекенд</h4><p>
+      <i><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="">FastAPI</i><i><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original.svg" alt="">SQLAlchemy</i><i><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="">PostgreSQL</i><i><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="">SQLite</i><i><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="">MongoDB</i><i><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="">Docker</i></p></div>
+    <div class="card"><h4 class="mono">інструменти</h4><p>
+      <i><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="">Git</i><i><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" alt="" class="inv">GitHub Actions</i><i><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="">VS Code</i><i><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" alt="">Lua</i><i><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powershell/powershell-original.svg" alt="">PowerShell</i><i><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="">Linux / WSL</i><i><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="">Node.js</i></p></div>
+  </div>
+</section>
+
+<!-- TEACHING -->
+<section id="teaching" class="wrap sec reveal">
+  <h2><span class="mono num">02</span> Викладання</h2>
+  <p class="sec-lead">Курси, які я читаю в КПІ. Матеріали — у Google Classroom і відкритих підручниках.</p>
+  <div class="courses">
+    <article class="card course"><span class="tag">Бакалаврат · 2 курс</span><h3>Електрика та магнетизм</h3><p>Лекції, нормативна дисципліна.</p><a href="https://classroom.google.com/c/NTQ1MzUzNjE5MDA3?cjc=su45h2j" target="_blank" rel="noopener">Classroom ↗</a></article>
+    <article class="card course"><span class="tag">Бакалаврат · 2 курс</span><h3>Комп’ютерні пакети для представлення наукових результатів</h3><p>Лекції та практичні.</p><a href="https://classroom.google.com/c/NjUyMDg4MjMwMjAw?cjc=7iattfn" target="_blank" rel="noopener">Classroom ↗</a></article>
+    <article class="card course"><span class="tag">Бакалаврат · 4 курс</span><h3>LaTeX в наукових дослідженнях</h3><p>Лекції та практичні.</p><a href="https://classroom.google.com/c/MjI0MTA1NjIxMDkw?cjc=we6caxd" target="_blank" rel="noopener">Classroom ↗</a></article>
+    <article class="card course"><span class="tag m">Магістратура · 1 курс</span><h3>Квантова хімія та квантово-механічні обчислення</h3><p>Лекції та практичні.</p><a href="https://sergiokapone.github.io/QChemLectures/" target="_blank" rel="noopener">Конспект ↗</a></article>
+    <article class="card course"><span class="tag m">Магістратура · 1 курс</span><h3>Фізика горіння</h3><p>Лекції та практичні, вибіркова.</p><a href="https://classroom.google.com/c/MTUzMzA1ODEzNDEz?cjc=dazq4pe" target="_blank" rel="noopener">Classroom ↗</a></article>
+    <article class="card course"><span class="tag m">Магістратура · 1 курс</span><h3>Фізика плазми</h3><p>Лекції та практичні, вибіркова.</p><a href="https://sergiokapone.github.io/plasma-physics/" target="_blank" rel="noopener">Конспект ↗</a></article>
+  </div>
+</section>
+
+<!-- BOOKS -->
+<section id="books" class="wrap sec reveal">
+  <h2><span class="mono num">03</span> Відкриті підручники</h2>
+  <p class="sec-lead">Верстаю у LaTeX, збираю в CI, публікую на GitHub Pages — читати можна просто в браузері.</p>
+  <div class="books">
+    <a class="book" href="https://sergiokapone.github.io/ElMagConspect/" target="_blank" rel="noopener"><b>Електрика та магнетизм</b><span>навчальний посібник</span></a>
+    <a class="book" href="https://sergiokapone.github.io/ClassicalEletrodynamics/" target="_blank" rel="noopener"><b>Класична електродинаміка</b><span>мікроскопічна теорія</span></a>
+    <a class="book" href="https://sergiokapone.github.io/plasma-physics/" target="_blank" rel="noopener"><b>Фізика плазми</b><span>конспект лекцій</span></a>
+    <a class="book" href="https://sergiokapone.github.io/QChemLectures/" target="_blank" rel="noopener"><b>Квантова хімія</b><span>та квантово-механічні обчислення</span></a>
+    <a class="book" href="https://sergiokapone.github.io/opticsbook/" target="_blank" rel="noopener"><b>Оптика</b><span>практичний курс</span></a>
+    <a class="book" href="https://sergiokapone.github.io/Thermodynamics/" target="_blank" rel="noopener"><b>Термодинаміка</b><span>конспект лекцій</span></a>
+    <a class="book" href="https://sergiokapone.github.io/Cosmology/" target="_blank" rel="noopener"><b>Космологічні нотатки</b><span>нотатки</span></a>
+    <a class="book" href="https://sergiokapone.github.io/ElMagProblems/" target="_blank" rel="noopener"><b>Збірник задач з ЕіМ</b><span>електрика та магнетизм</span></a>
+    <a class="book" href="https://sergiokapone.github.io/FieldTheoryProblems/" target="_blank" rel="noopener"><b>Задачі з електродинаміки</b><span>збірник</span></a>
+    <a class="book" href="https://sergiokapone.github.io/ElMagLectures/" target="_blank" rel="noopener"><b>Лекції з ЕіМ</b><span>конспект</span></a>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="wrap sec reveal">
+  <h2><span class="mono num">04</span> Вибрані проєкти</h2>
+  <div class="proj-grid">
+    <article class="card proj big">
+      <span class="tag">VS Code · Marketplace</span>
+      <h3>PSM Theme</h3>
+      <p>Тема для VS Code з низькою втомою очей для Python, LaTeX і наукових сесій. Опублікована у Marketplace.</p>
+      <div class="meta mono"><i>theme</i><i>vscode</i></div>
+      <div class="links"><a href="https://marketplace.visualstudio.com/items?itemName=Sergiy.psm-theme" target="_blank" rel="noopener">Marketplace ↗</a><a href="https://github.com/sergiokapone/psm-theme" target="_blank" rel="noopener">Код ↗</a></div>
+    </article>
+    <article class="card proj">
+      <span class="tag">CTAN · LaTeX</span>
+      <h3>babel-ukrainian</h3>
+      <p>Підтримка української мови в Babel для pdfTeX, XeTeX і LuaTeX — пакет у CTAN.</p>
+      <div class="meta mono"><i>TeX</i><i>babel</i></div>
+      <div class="links"><a href="https://ctan.org/pkg/babel-ukrainian" target="_blank" rel="noopener">CTAN ↗</a><a href="https://github.com/sergiokapone/babel-ukrainian" target="_blank" rel="noopener">Код ↗</a></div>
+    </article>
+    <article class="card proj">
+      <span class="tag">Lite XL · Lua</span>
+      <h3>Плагіни для Lite XL</h3>
+      <p>Рендер Markdown у редакторі, відкриття HTML у браузері, текстовий шар PDF/DjVu прямо у вкладці.</p>
+      <div class="meta mono"><i>Lua</i><i>editor</i></div>
+      <div class="links"><a href="https://github.com/sergiokapone/lite-xl-mdpreview" target="_blank" rel="noopener">mdpreview ↗</a><a href="https://github.com/sergiokapone/lite-xl-textlayer" target="_blank" rel="noopener">textlayer ↗</a></div>
+    </article>
+    <article class="card proj">
+      <span class="tag">FastAPI</span>
+      <h3>SnapshotExchange</h3>
+      <p>Застосунок для обміну знімками на FastAPI з автентифікацією та БД.</p>
+      <div class="meta mono"><i>Python</i><i>FastAPI</i><i>PostgreSQL</i></div>
+      <div class="links"><a href="https://sergiokapone.github.io/SnapshotExchange/" target="_blank" rel="noopener">Документація ↗</a><a href="https://github.com/sergiokapone/SnapshotExchange" target="_blank" rel="noopener">Код ↗</a></div>
+    </article>
+    <article class="card proj">
+      <span class="tag">Автоматизація</span>
+      <h3>matrix3 · Ela uploader</h3>
+      <p>Генератор сторінок дисциплін для WordPress та скрипти пакетного завантаження дисертацій до репозиторію ela.kpi.ua (DSpace 7).</p>
+      <div class="meta mono"><i>Python</i><i>REST</i><i>WordPress</i></div>
+      <div class="links"><a href="https://github.com/sergiokapone/matrix3" target="_blank" rel="noopener">matrix3 ↗</a><a href="https://github.com/sergiokapone/Ela_batch_uploader" target="_blank" rel="noopener">uploader ↗</a></div>
+    </article>
+    <article class="card proj">
+      <span class="tag">AI · Python</span>
+      <h3>AI_assistant</h3>
+      <p>Асистент, що пояснює текст наукових статей. Розгорнутий як веб-сервіс із документацією API.</p>
+      <div class="meta mono"><i>Python</i><i>LLM</i><i>API</i></div>
+      <div class="links"><a href="https://ai-assistant-tddc.onrender.com/docs" target="_blank" rel="noopener">Demo ↗</a><a href="https://github.com/sergiokapone/AI_assistant" target="_blank" rel="noopener">Код ↗</a></div>
+    </article>
+    <article class="card proj">
+      <span class="tag">CLI · Python</span>
+      <h3>Console_Assistant</h3>
+      <p>Командний асистент для адміністративних задач із SQLite; технічний опис у PDF.</p>
+      <div class="meta mono"><i>Python</i><i>SQLite</i><i>CLI</i></div>
+      <div class="links"><a href="https://github.com/sergiokapone/Console_Assistant" target="_blank" rel="noopener">Код ↗</a></div>
+    </article>
+    <article class="card proj">
+      <span class="tag">Утиліти</span>
+      <h3>tree_view_creator · LaTeXPiX</h3>
+      <p>ASCII-дерево каталогів із YAML-конфігурацій і пакетний OCR формул у LaTeX.</p>
+      <div class="meta mono"><i>Python</i><i>YAML</i><i>OCR</i></div>
+      <div class="links"><a href="https://github.com/sergiokapone/tree_view_creator" target="_blank" rel="noopener">tree_view ↗</a><a href="https://github.com/sergiokapone/LaTeXPiX" target="_blank" rel="noopener">LaTeXPiX ↗</a></div>
+    </article>
+  </div>
+</section>
+
+<!-- LIVE REPOS -->
+<section id="repos" class="wrap sec reveal">
+  <h2><span class="mono num">05</span> Усі репозиторії</h2>
+  <p class="sec-lead">Живий список із GitHub API: <span id="repo-count" class="mono">…</span></p>
+  <div class="toolbar">
+    <input id="q" type="search" placeholder="Пошук за назвою чи описом…" aria-label="Пошук">
+    <div id="langs" class="langs"></div>
+    <label class="chk"><input id="forks" type="checkbox"> показати форки</label>
+  </div>
+  <div id="repo-grid" class="repo-grid"></div>
+  <button id="more" class="btn" hidden>Показати ще</button>
+</section>
+
+<!-- TIMELINE -->
+<section id="path" class="wrap sec reveal">
+  <h2><span class="mono num">06</span> Шлях</h2>
+  <ol class="timeline">
+    <li><time class="mono">1978</time><div><b>Народився</b> у с.&nbsp;Пересадівка, Миколаївщина.</div></li>
+    <li><time class="mono">2001</time><div><b>Магістр</b> за спеціальністю «Фізика», Миколаївський національний педагогічний університет.</div></li>
+    <li><time class="mono">2005</time><div><b>Кандидат фіз.-мат. наук</b> (01.04.19 — фізика полімерів), Інститут хімії високомолекулярних сполук НАН України.</div></li>
+    <li><time class="mono">2005–2014</time><div><b>Асистент, доцент</b> кафедри фізики КНУБА; вчене звання доцента — 2011.</div></li>
+    <li><time class="mono">2014 →</time><div><b>Доцент кафедри прикладної фізики</b> НН ФТІ, КПІ ім. Ігоря Сікорського. Вчений секретар кафедри, заступник директора з міжнародних питань.</div></li>
+  </ol>
+
+  <h3 class="sub">Сертифікати й підвищення кваліфікації</h3>
+  <ul class="certs">
+    <li><time class="mono">2024</time> Python Developer — GoIT</li>
+    <li><time class="mono">2023</time> Стажування — Інститут гідромеханіки НАНУ; «IT-інструменти для викладачів» — GlobalLogic</li>
+    <li><time class="mono">2022</time> «Створення фото, відео, анімації для підтримки навчання» — Інститут післядипломної освіти КПІ</li>
+    <li><time class="mono">2021</time> «Цифрові інструменти Google для закладів вищої освіти» — Академія цифрового розвитку</li>
+  </ul>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="wrap sec reveal">
+  <div class="contact card">
+    <h2><span class="mono num">07</span> Контакти</h2>
+    <h3 class="sub">Наукові профілі</h3>
+    <div class="profiles">
+      <a href="https://orcid.org/0000-0002-9851-7109" target="_blank" rel="noopener"><span>ORCID</span><b class="mono">0000-0002-9851-7109</b></a>
+      <a href="https://www.scopus.com/authid/detail.uri?authorId=7005144109" target="_blank" rel="noopener"><span>Scopus ID</span><b class="mono">7005144109</b></a>
+      <a href="https://www.webofscience.com/wos/author/record/I-3896-2018" target="_blank" rel="noopener"><span>Web of Science</span><b class="mono">I-3896-2018</b></a>
+      <a href="https://scholar.google.com/citations?user=lyOREZEAAAAJ" target="_blank" rel="noopener"><span>Google Scholar</span><b class="mono">lyOREZEAAAAJ</b></a>
+      <a href="https://intellect.kpi.ua/profile/psm37" target="_blank" rel="noopener"><span>Intellect КПІ</span><b class="mono">psm37</b></a>
+      <a href="https://github.com/sergiokapone" target="_blank" rel="noopener"><span>GitHub</span><b class="mono">@sergiokapone</b></a>
+      <a href="https://www.linkedin.com/in/sergiokapone/" target="_blank" rel="noopener"><span>LinkedIn</span><b class="mono">in/sergiokapone</b></a>
+      <a href="mailto:s.ponomarenko@kpi.ua"><span>Email</span><b class="mono">s.ponomarenko@kpi.ua</b></a>
+    </div>
+    <div class="cta">
+      <a class="btn" href="https://apd.ipt.kpi.ua/kafedra/stuff/ponomarenko/" target="_blank" rel="noopener">Сторінка на кафедрі ↗</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot mono">
+  <span>© <span id="yr"></span> Сергій Пономаренко · Київ, Україна</span>
+  <span>Зроблено вручну: HTML + CSS + JS, без фреймворків</span>
+</footer>
+
+<script src="repos-snapshot.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
