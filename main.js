@@ -33,7 +33,7 @@
     e.target.classList.add('in');
     e.target.querySelectorAll('[data-count]').forEach(count);
     revObs.unobserve(e.target);
-  }), { threshold: .12 });
+  }), { threshold: 0, rootMargin: '0px 0px -8% 0px' });
   document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
 
   /* typing */
